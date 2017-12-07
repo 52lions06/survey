@@ -1,0 +1,55 @@
+hey will, the first thing I would here is narrow down the scope of the project. 
+It looks like the main point of the project is to fetch data from a weather web
+api for a zip code and display it? I think you should focus the survey more on
+where the user is located. For example, one of the inputs asks for a 'story'.
+Instead you could just ask: 1. Where they are located, 2. Their ideal weather conditions
+In other words it should probably be more focused on the weather, which would give the whole
+project a central theme.
+
+Secondly, there should probably be two parts to the site: 
+In the first part, you render the survey and take in the user input.
+In the second part, you render the weather for the user's location.
+Right now both of those parts seem to be integrated together. 
+
+Conceptually, there are 2 'steps'.
+So you could have a component that manages your steps and renders 
+either the Survey component, or the Weather component based on the value
+of this.state.step (conditionally renders). If you want to go to the next
+step or go back you'll have to change the step value.
+
+I would challenge you to think out more clearly the structure of your project
+and perhaps write out first the different components you think you need. You should
+define them and note their order (hierarchy). This could define your directory structure.
+For example: 
+
+App component:
+Imports immediate children component and simply renders the app.
+
+StepManager:
+Stateful component that renders its children conditionally -> based on the value
+of 'step' in its state. This component defines a method that updates the step.
+
+==============================================================
+
+Separately, you define the directory structure of the project.
+Note that since you are fetching data from a web api, you will have to manage 
+the loading state. So you will probably need a loading field in StepManager's state
+If loading is true in StepManager, show Loading. If not, then show either Survey or Weather
+based on the value of this.state.step
+
+You will also need to think about how to pass the survey results from Survey to Weather, So
+that Weather can properly query the web API you are using. 
+Maybe you create another component that holds the values of survey's fields, so that Weather can access
+them?  
+
+/App
+  /StepManager
+    /Survey
+      ... define Survey's children components here
+    /Loading
+      ... define Loading's children components here 
+    /Weather
+      ... define Weather's children components here
+
+
+StepManager is imported into App and rendered.
