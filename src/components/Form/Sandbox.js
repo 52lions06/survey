@@ -143,6 +143,7 @@ class ProjectData extends React.Component {
   }
 }
 
-
+// only your root 'App' component should do this. If you want to render 
+// children of App import them into App instead.
 
 render(<ProjectData />, document.getElementById('root'));
