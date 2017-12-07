@@ -57,11 +57,11 @@ class Survey extends React.Component {
       login: false
     };
 // methods bound so they can be used later 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 // When the value is being changed it will update be what every specific target is being used
-  handleChange(event) {
+  handleChange = (event) => {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
@@ -71,7 +71,7 @@ class Survey extends React.Component {
     });
   }
 // When the form is submitted then there will be an alert and all values will be cleared 
-  handleSubmit(event) {
+  handleSubmit =  (event) => {
     alert(`'A name was submitted: ${this.state.value} and they want ${this.state.textArea}`);
     event.preventDefault();
     this.setState({
@@ -127,7 +127,9 @@ const questions = myQuestions.map((questions, index) => {
               onChange={this.handleChange} />
           </label>*/}
           
-          <ZipCode zip="48201" ></ZipCode>
+          <ZipCode  >
+            <input type="text" name="zipCode" onChange={this.handleChange}/>
+          </ZipCode>
             <input type="submit" value="Submit" />
       </form>
     </div>
