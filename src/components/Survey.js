@@ -111,12 +111,13 @@ const questions = myQuestions.map((questions, index) => {
               value={this.state.textArea}
               onChange={this.handleChange} />
           </label>
+          <br/>
+          <br/>
           <QuestionsA />
           <br/>
           <QuestionsB />
            <br />
-         {questions}
-         <br />
+         {/*{questions}*/}
           {/*<label>
             Please Enter your zip Code for the Weather:
           {/*<input

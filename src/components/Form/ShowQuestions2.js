@@ -1,24 +1,24 @@
 import React from 'react';
 
 function ShowQuestions2(props) {
-  if (!props.warn) {
+  if (!props.show) {
     return null;
   }
 
   return (
     <div >
       <label>
-            This is Question 5
-            <input type="radio" name="ques5" value="male" /> Male<br/>
-            <input type="radio" name="ques5" value="female"/> Female<br/>
-            <input type="radio" name="ques5" value="other"/> Other
+            What is your favorite thing to programming language? 
+            <input type="radio" name="ques5" value="ReactJS" /> ReactJS<br/>
+            <input type="radio" name="ques5" value="female"/> NodeJS<br/>
+            <input type="radio" name="ques5" value="other"/> Java
           </label>
            <br />
           <label>
-            This is Question 6
-            <input type="radio" name="ques6" value="male" /> Male<br/>
-            <input type="radio" name="ques6" value="female"/> Female<br/>
-            <input type="radio" name="ques6" value="other"/> Other
+            What is your favorite food?
+            <input type="radio" name="ques6" value="pizza" /> pizza<br/>
+            <input type="radio" name="ques6" value="cheeseburgers"/> cheeseburgers<br/>
+            <input type="radio" name="ques6" value="spaghetti"/> spaghetti
           </label>
            <br />
     </div>

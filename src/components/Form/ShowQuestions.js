@@ -1,24 +1,24 @@
 import React from 'react';
 
 function ShowQuestions(props) {
-  if (!props.warn) {
+  if (!props.show) {
     return null;
   }
 
   return (
     <div >
       <label>
-            This is Question 2
-            <input type="radio" name="ques2" value="male" /> Male<br/>
-            <input type="radio" name="ques2" value="female"/> Female<br/>
-            <input type="radio" name="ques2" value="other"/> Other
+            Who is the best superhero of them all?
+            <input type="radio" name="ques2" value="batman" /> batman<br/>
+            <input type="radio" name="ques2" value="superman"/> superman<br/>
+            <input type="radio" name="ques2" value="the hulk"/> the hulk
           </label>
            <br />
           <label>
-            This is Question 3
-            <input type="radio" name="ques3" value="male" /> Male<br/>
-            <input type="radio" name="ques3" value="female"/> Female<br/>
-            <input type="radio" name="ques3" value="other"/> Other
+            What would you like to do?
+            <input type="radio" name="ques3" value="eat" /> eat<br/>
+            <input type="radio" name="ques3" value="code"/> code<br/>
+            <input type="radio" name="ques3" value="video games"/> video games
           </label>
            <br />!
     </div>

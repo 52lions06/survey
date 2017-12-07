@@ -18,12 +18,9 @@ class QuestionsB extends React.Component {
     return (
       <div>
           <label>
-            This is Question 4
-            <input type="radio" name="ques4" value="male" /> Male<br/>
-            <input type="radio" name="ques4" value="female"/> Female<br/>
-            <input type="radio" name="ques4" value="other"/> Other
+            Click Below to tell me about yourself?
           </label>
-        <ShowQuestions2 warn={this.state.showQuestions} />
+        <ShowQuestions2 show={this.state.showQuestions} />
         <button onClick={this.handleToggleClick}>
           {this.state.showQuestions ? 'Hide' : 'Show'}
         </button>
