@@ -1,8 +1,8 @@
 import React from 'react';
-// import Greeting from './Greeting/Greeting';
 import QuestionsA from './Form/QuestionsA';
 import QuestionsB from './Form/QuestionsB';
 import ZipCode from './ZipCode';
+import './Survey.css'
 
 /**
  * Create a form using React
@@ -91,23 +91,22 @@ const questions = myQuestions.map((questions, index) => {
 })
 
     return (
-      <div>
-        {/*<Greeting
-          name={this.state.value}
-          isLoggedIn={this.state.login} />*/}
-        <form onSubmit={this.handleSubmit}>
-          <label>
+      <div className="container">
+        <form onSubmit={this.handleSubmit} className="form">
+          <label >
             Name:
           <input
+              className="name"
               name="value"
               type="text"
               value={this.state.value}
               onChange={this.handleChange} />
           </label>
           <br />
-          <label>
+          <label >
             Write a Story:
           <textarea
+              className="textArea"
               name="textArea"
               value={this.state.textArea}
               onChange={this.handleChange} />

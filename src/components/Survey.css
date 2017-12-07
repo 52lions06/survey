@@ -1,0 +1,24 @@
+.container {
+  padding: 0;
+  margin: 0;
+  background-color: orange;
+}
+
+.form {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 20%;
+  margin: auto;
+  background-color: white;
+}
+
+.name {
+  padding: 0;
+  margin: 10px -10px -3px 10px;
+}
+
+.textArea {
+  padding: 0;
+  margin: 5px 31px 0px 9px
+}
